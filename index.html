@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InstaBlog</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+  <header class="header">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo on the left -->
+      <div class="logo">
+        <img src="assets/logo.png" alt="InstaBlog Logo" height="40">
+      </div>
+
+      <!-- Dark mode toggle button on the right -->
+      <nav>
+        <ul class="list-unstyled d-flex align-items-center gap-3 mb-0">
+          <li><button id="toggleDarkMode">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Create Post Form -->
+    <section class="create-post">
+      <h2>Create a New Post</h2>
+      <form id="postForm">
+        <input type="text" id="postUsername" placeholder="Your Username" required>
+        <input type="file" id="postImage" accept="image/*" required>
+        <input type="text" id="postCaption" placeholder="Write a caption..." required>
+        <button type="submit">Post</button>
+      </form>
+    </section>
+
+    <!-- Posts Section -->
+    <section class="posts">
+      <h2>Recent Posts</h2>
+      <div class="posts-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 InstaBlog. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
